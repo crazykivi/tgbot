@@ -19,10 +19,9 @@
 Для начала нужно загрузить резервную копию базы данных (присутствует в архиве) или выполнить sql запрос в mysql:
 ##### 1.Через панель phpmyadmin
 ###### а) Бекап бд telegram_bot_db
-создать базу данных telegram_bot_db и портировать туда бд ;
+Создать базу данных telegram_bot_db и портировать туда бд ;
 ###### б) Создание бд из запроса
-перейти в панель SQL (ссылка на прямую: http://localhost/phpmyadmin/index.php?route=/server/sql);
-и прописать: 
+Перейти в панель SQL (ссылка на прямую: http://localhost/phpmyadmin/index.php?route=/server/sql) и прописать: 
 CREATE TABLE telegram_bot_db.users (
   id int(11) NOT NULL AUTO_INCREMENT,
   telegram_id bigint(20) NOT NULL,
@@ -38,7 +37,7 @@ COLLATE utf8mb4_general_ci;
 ALTER TABLE telegram_bot_db.users
 ADD UNIQUE INDEX telegram_id (telegram_id);
 ##### 2. Через dbforge
-создать базу данных telegram_bot_db и портировать туда бд;
+Создать базу данных telegram_bot_db и портировать туда бд;
 #### 2) Добавление API включа бота
 После этого, нужно открыть bot.php или botbalance.php в любом текстовом редакторе и в поле "$bot = new BotApi('');" прописать API бота, который будет получен при создании бота.
 #### 3) Запуск бота
